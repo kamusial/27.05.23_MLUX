@@ -27,9 +27,20 @@ class MyGrid(GridLayout):
         self.inside.add_widget(self.wiek)
 
         self.add_widget(self.inside)
-        self.add_widget(Button(text='Slij', font_size=40))
 
+        self.slij = (Button(text='Slij', font_size=40))
+        self.slij.bind(on_press=self.nacisniety_slij)
+        self.add_widget(self.slij)
 
+    def nacisniety_slij(self, instance):
+        print('nacisniety')
+        imie = self.imie.text
+        nazwisko = self.nazwisko.text
+        wiek = self.wiek.text
+        print(f'Imie: {imie}, nazwisko: {nazwisko}\nwiek: {wiek}')
+        print('Imie: ',imie,', nazwisko: ',nazwisko,'\nwiek: ',wiek)
+        if wiek >= 18:
+            print('jestes pelnoletni')
 
 class MyApp(App):
     def build(self):
