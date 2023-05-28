@@ -33,7 +33,7 @@ class MyGrid(GridLayout):
         self.add_widget(self.slij)
 
         self.czysc = (Button(text='Czysc', font_size=40))
-        self.czysc.bind(on_press=self.nacisniety_czysc)
+        self.czysc.bind(on_release=self.nacisniety_czysc)
         self.add_widget(self.czysc)
 
     def nacisniety_slij(self, instance):
