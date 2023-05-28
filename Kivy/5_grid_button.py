@@ -8,9 +8,18 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 
-class MyApp(App):
+class MyGrid(Widget):
+    imie = ObjectProperty()
+    nazw = ObjectProperty()
+    wiek = ObjectProperty()
+
+    def button1(self):
+        print('Name: ', self.imie.text)
+        self.imie.text = ''
+
+class My5App(App):
     def build(self):
-        return Label(text='Hello')
+        return MyGrid()
 
 if __name__ == '__main__':
-    MyApp().run()
+    My5App().run()

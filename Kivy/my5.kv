@@ -1,4 +1,7 @@
 <MyGrid>:
+    imie: imie
+    nazw: nazwisko
+    wiek: wiek
     GridLayout:
         size: root.width - 100, root.height - 100
         pos: 50, 50
@@ -8,18 +11,22 @@
             Label:
                 text: "imie"
             TextInput:
+                id: imie
                 multiline: False
             Label:
                 text: "nazwisko"
             TextInput:
+                id: nazwisko
                 multiline: False
             Label:
                 text: "wiek"
             TextInput:
+                id:wiek
                 multiline: False
         Button:
             text: "slij"
             font_size: 40
+            on_press:root.button1()
         Button:
             text: "czysc"
             font_size: 40

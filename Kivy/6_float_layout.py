@@ -8,9 +8,9 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 
-class MyApp(App):
+class My6App(App):
     def build(self):
         return Label(text='Hello')
 
 if __name__ == '__main__':
-    MyApp().run()
+    My6App().run()
