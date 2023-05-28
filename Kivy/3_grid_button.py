@@ -32,6 +32,10 @@ class MyGrid(GridLayout):
         self.slij.bind(on_press=self.nacisniety_slij)
         self.add_widget(self.slij)
 
+        self.czysc = (Button(text='Czysc', font_size=40))
+        self.czysc.bind(on_press=self.nacisniety_czysc)
+        self.add_widget(self.czysc)
+
     def nacisniety_slij(self, instance):
         print('nacisniety')
         imie = self.imie.text
@@ -39,8 +43,14 @@ class MyGrid(GridLayout):
         wiek = self.wiek.text
         print(f'Imie: {imie}, nazwisko: {nazwisko}\nwiek: {wiek}')
         print('Imie: ',imie,', nazwisko: ',nazwisko,'\nwiek: ',wiek)
-        if wiek >= 18:
+        if int(wiek) >= 18:
             print('jestes pelnoletni')
+
+    def nacisniety_czysc(self, instance):
+        self.imie.text = ''
+        self.nazwisko.text = ''
+        self.wiek.text = ''
+        print('dane wyczyszczone')
 
 class MyApp(App):
     def build(self):
