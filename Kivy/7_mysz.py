@@ -17,7 +17,7 @@ class Touch(Widget):
         self.btn.size[0] += 10
     def on_touch_move(self, touch):
         print('mysz w ruchu', touch.spos)
-        self.btn.pos = touch.pos
+        self.btn.pos[1] = touch.pos[1]+20
 
     def on_touch_up(self, touch):
         print('mysz w gorze', touch.pos[1])
